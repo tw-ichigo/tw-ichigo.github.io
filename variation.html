@@ -42,41 +42,57 @@
 <body>
     <div class="container">
         <div class="card">            
-            <h1>Basic Statistics Formula</h1>
-            <h3>基本公式</h3>
+            <h1>Variance</h1>
+            <h3>變異數(方差)</h3>
             <p class="formula">
-               <a href="statbase.html">查看</a>
+            $$\sigma ^{2}=\frac{\sum (x-\bar{x})^{2}}{n}$$
             </p>
             <p class="comment">
-                Mean,Median,Mode,Variance,Standard Deviation    
+                x = Observations given $\bar{x}$ = Mean <br>
+                n = Total number of observations    
             </p>
         </div>
 
         <div class="card">            
-            <h1>central tendency</h1>
-            <h3>集中趨勢</h3>
+            <h1>Standard Deviation</h1>
+            <h3>標準差(標準偏差)</h3>
             <p class="formula">
-                <a href="central-tendency.html">查看</a>
+            $$S = \sigma = \sqrt{\frac{\sum (x-\bar{x})^{2}}{n}}$$
             </p>
             <p class="comment">
-                算數平均數、中位數及眾數<br>
-                幾何平均數、調和平均數、加權平均數、截尾平均數<br>
-                中程數、中樞紐、三均值、極端值調整平均數  
+                x = Observations given $\bar{x}$ = Mean <br>
+                n = Total number of observations    
             </p>
         </div>
 
         <div class="card">            
-            <h1>statistical dispersion</h1>
-            <h3>離散程度(variation)</h3>
+            <h1>coefficient of variation</h1>
+            <h3>變異係數</h3>
             <p class="formula">
-                <a href="variation.html">查看</a>
+            $$c_v = {\sigma \over \mu }$$
             </p>
             <p class="comment">
-                用以描述離散程度或變差的量<br>
-                主要有變異數(方差)、標準差、<br>變異係數(變差係數)和四分位距等。 
+                是機率分佈離散程度的一個歸一化量度<br>
+                其定義為標準差$\sigma$與平均值$\mu$之比<br>
+                變異係數只對由比率純量計算出來的數值有意義。  
             </p>
         </div>
 
+        <div class="card">            
+            <h1>interquartile range, IQR</h1>
+            <h3>四分位距</h3>
+            <p class="formula">
+                四分位差（Quartile Deviation, QD），<br>
+                是$Q_{1},Q_{3}$的差距的一半，<br>
+                即$\mathrm{QD} = \frac{Q_3 - Q_1}{2}$
+
+            </p>
+            <p class="comment">
+                是描述統計學中的一種方法，<br>
+                以確定第三個四分位數和第一個四分位數的差值<br>
+                （即$Q_{1},Q_{3}$的差距）
+            </p>
+        </div>
     </div>
 </body>
 </html>
