@@ -10,89 +10,221 @@
         };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
     <style>
-        .card{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border: 2px solid #5b78c7;
-            margin: 2px auto;
-        }
-        .card h1,
-        .card h3{
-            margin-bottom: 0;
-        }
-        .card h3,
-        .card .comment{
-            margin-top: 2px;
-        }
-
-        .card .comment{
-            margin-left: 2rem;
-        }
-
-        .card .formula{
-            margin-left: 1rem;
-            border: 2px solid pink;
-            color: blueviolet;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">            
-            <h1>Variance</h1>
-            <h3>變異數(方差)</h3>
-            <p class="formula">
-            $$\sigma ^{2}=\frac{\sum (x-\bar{x})^{2}}{n}$$
-            </p>
-            <p class="comment">
-                x = Observations given $\bar{x}$ = Mean <br>
-                n = Total number of observations    
-            </p>
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">Variance</h1>
+                <h3>變異數(方差)</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    $$\sigma ^{2}=\frac{\sum (x-\bar{x})^{2}}{n}$$  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    x = Observations given $\bar{x}$ = Mean <br>
+                    n = Total number of observations   
+                </p>
+            </div>
         </div>
 
-        <div class="card">            
-            <h1>Standard Deviation</h1>
-            <h3>標準差(標準偏差)</h3>
-            <p class="formula">
-            $$S = \sigma = \sqrt{\frac{\sum (x-\bar{x})^{2}}{n}}$$
-            </p>
-            <p class="comment">
-                x = Observations given $\bar{x}$ = Mean <br>
-                n = Total number of observations    
-            </p>
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Standard Deviation</h1>
+                <h3>標準差(標準偏差)</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    $$S = \sigma = \sqrt{\frac{\sum (x-\bar{x})^{2}}{n}}$$  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    x = Observations given $\bar{x}$ = Mean <br>
+                    n = Total number of observations  
+                </p>
+            </div>
         </div>
 
-        <div class="card">            
-            <h1>coefficient of variation</h1>
-            <h3>變異係數</h3>
-            <p class="formula">
-            $$c_v = {\sigma \over \mu }$$
-            </p>
-            <p class="comment">
-                是機率分佈離散程度的一個歸一化量度<br>
-                其定義為標準差$\sigma$與平均值$\mu$之比<br>
-                變異係數只對由比率純量計算出來的數值有意義。  
-            </p>
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">coefficient of variation</h1>
+                <h3>變異係數</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                  $$c_v = {\sigma \over \mu }$$ 
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    是機率分佈離散程度的一個歸一化量度<br>
+                    其定義為標準差$\sigma$與平均值$\mu$之比<br>
+                    變異係數只對由比率純量計算出來的數值有意義。 
+                </p>
+            </div>
         </div>
 
-        <div class="card">            
-            <h1>interquartile range, IQR</h1>
-            <h3>四分位距</h3>
-            <p class="formula">
-                四分位差（Quartile Deviation, QD），<br>
-                是$Q_{1},Q_{3}$的差距的一半，<br>
-                即$\mathrm{QD} = \frac{Q_3 - Q_1}{2}$
-
-            </p>
-            <p class="comment">
-                是描述統計學中的一種方法，<br>
-                以確定第三個四分位數和第一個四分位數的差值<br>
-                （即$Q_{1},Q_{3}$的差距）
-            </p>
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">interquartile range, IQR</h1>
+                <h3>四分位距</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    四分位差（Quartile Deviation, QD），<br>
+                    是$Q_{1},Q_{3}$的差距的一半，<br>
+                    即$\mathrm{QD} = \frac{Q_3 - Q_1}{2}$  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    是描述統計學中的一種方法，<br>
+                    以確定第三個四分位數和第一個四分位數的差值<br>
+                    （即$Q_{1},Q_{3}$的差距） 
+                </p>
+            </div>
         </div>
+
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">Quartile</h1>
+                <h3>四分位數</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    第一四分位數（$Q_{1}$），又稱較小四分位數，等於該樣本中所有數值由小到大置換後第25%的數字。<br>
+                    第二四分位數（$Q_{2}$），又稱中位數，等於該樣本中所有數值由小到大置換後第50%的數字。<br>
+                    第三四分位數（$Q_{3}$），又稱較大四分位數，等於該樣本中所有數值由小到大置換後第75%的數字。                    
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    第三[四分位數]與第一[四分位數]的差距又稱四分位距（InterQuartile Range, IQR）。 
+                </p>
+            </div>
+        </div>
+ 
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Range</h1>
+                <h3>全距</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    $$R=x_{\mathrm {max} }-x_{\mathrm {min} }$$
+                    其中R為全距，$x_{\mathrm {max} }$為最大值，$x_{\mathrm {min} }$為最小值。  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    全距為離散程度的最簡單測度值，易受極端值影響。<br>
+                    其適用於等距變數、比率變數，不適用於名義變數或次序變數。 
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">Percentile</h1>
+                <h3>百分位數</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    若一群資料的個數為N，且由小到大排列，<br>
+                    設N×k%=a,<br>
+                    若${a \notin Z}$，Pk=第$\lfloor a\rfloor$筆資料與第$\lfloor a\rfloor$+1筆資料的算術平均數,<br>
+                    若${a \in Z}$，Pk=第a筆資料   
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    將一組數據從小到大排序，並計算相應的累計百分位，<br>
+                    則某一百分位所對應數據的值就稱為這一百分位的百分位數，<br>
+                    以Pk表示第k百分位數。 
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Standard Score</h1>
+                <h3>標準分數(z-score)</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    $$z = {x - \mu \over \sigma}$$
+                    其中$\sigma \ne 0。$<br>
+                                    
+                    $x\,$是需要被標準化的原始分數<br>
+                    $\mu\,$是母體的平均值<br>
+                    $\sigma\,$是母體的標準差<br>
+                    Z值的量代表著原始分數和母體平均值之間的距離，<br>是以標準差為單位計算。<br>
+                    在原始分數低於平均值時Z則為負數，反之則為正數。  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    是一種無因次值，就是一種純數字標記，<br>
+                    是藉由從單一（原始）分數中減去母體的平均值，<br>
+                    再依照母體（母集合）的標準差分割成不同的差距，<br>
+                    按照z值公式，各個樣本在經過轉換後，<br>通常在正、負五到六之間不等。<br>
+                    其約化過程被稱為「標準化」（standardizing）。  
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">Chebyshev's Inequality</h1>
+                <h3>切比雪夫不等式</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    對於任意b>0，有：    
+                    $$P(|X-E(X)|\geqslant b)\le\frac{Var(X)}{b^2}$$
+                    $$Pr(\left|X-\mu\right|\geq k\sigma)\leq\frac{1}{k^2}.$$   
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    切比雪夫不等式，對任何分布形狀的數據都適用。 <br>
+                    與平均相差k個標準差以上的值，數目不多於$\frac{1}{k^2}$  
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Gini coefficient</h1>
+                <h3>基尼係數</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    實際收入分配曲線和收入分配絕對平等線之間的面積為A，<br>
+                    實際收入分配曲線和收入分配絕對不平等線之間的面積為B，<br>
+                    則表示收入與人口之間的比例的基尼係數為$\tfrac{A}{A + B}$。  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    根據勞倫茨曲線所定義的判斷年收入分配公平程度的指標 <br>
+                    ，是比例數值，在0和1之間。 <br>
+                    基尼係數越小，年收入分配越平均；<br>
+                    吉尼係數越大，年收入分配越不平均。  
+                </p>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

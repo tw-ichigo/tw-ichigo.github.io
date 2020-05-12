@@ -10,81 +10,93 @@
         };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
     <style>
-        .card{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border: 2px solid #5b78c7;
-            margin: 2px auto;
-        }
-        .card h1,
-        .card h3{
-            margin-bottom: 0;
-        }
-        .card h3,
-        .card .comment{
-            margin-top: 2px;
-        }
-
-        .card .comment{
-            margin-left: 2rem;
-        }
-
-        .card .formula{
-            display: flex;
-            justify-content: space-between;
-            margin-left: 1rem;
-            border: 2px solid pink;
-            color: blueviolet;
-        }
-
-        .card a{
-            margin: 5px;
-            border: 2px solid brown;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">            
-            <h1>Basic Statistics Formula</h1>
-            <h3>基本公式</h3>
-            <p class="formula">
-               <a href="statbase.html">公式</a>
-               <a href="program-statbase.html">程式</a>
-            </p>
-            <p class="comment">
+        <div class="card bg-primary text-white">
+            <div class="card-header">           
+              <h1 class="card-title">Basic Statistics Formula</h1>
+              <h3>基本公式</h3>
+            </div> 
+            <div class="card-body">
+              <p class="formula">
+               <a href="statbase.html" class="card-link btn btn-danger">公式</a>
+               <a href="program-statbase.html" class="card-link btn btn-warning">程式</a>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="comment card-text">
                 Mean,Median,Mode,Variance,Standard Deviation    
-            </p>
+              </p>
+            </div>
         </div>
 
-        <div class="card">            
-            <h1>central tendency</h1>
-            <h3>集中趨勢</h3>
-            <p class="formula">
-                <a href="central-tendency.html">查看</a>
-            </p>
-            <p class="comment">
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">central tendency</h1>
+                <h3>集中趨勢</h3>
+            </div> 
+            <div class="card-body">
+              <p class="formula">
+                <a href="central-tendency.html" class="card-link btn btn-outline-dark">查看</a>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="comment card-text">
                 算數平均數、中位數及眾數<br>
                 幾何平均數、調和平均數、加權平均數、截尾平均數<br>
-                中程數、中樞紐、三均值、極端值調整平均數  
-            </p>
+                中程數、中樞紐、三均值、極端值調整平均數  <br>
+                平方平均數、平方平均數、算術-幾何平均數、幾何-調和平均數<br>
+                希羅平均數
+              </p>
+            </div>
         </div>
 
-        <div class="card">            
-            <h1>statistical dispersion</h1>
-            <h3>離散程度(variation)</h3>
-            <p class="formula">
-                <a href="variation.html">查看</a>
-            </p>
-            <p class="comment">
+        <div class="card bg-secondary text-white">
+            <div class="card-header">           
+              <h1 class="card-title">statistical dispersion</h1>
+              <h3>離散程度(variation)</h3>
+            </div> 
+            <div class="card-body">
+              <p class="formula">
+                <a href="variation.html" class="card-link btn btn-dark">查看</a>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="comment card-text">
                 用以描述離散程度或變差的量<br>
-                主要有變異數(方差)、標準差、<br>變異係數(變差係數)和四分位距等。 
-            </p>
+                主要有變異數(方差)、標準差、<br>變異係數(變差係數)和四分位距等。 <br>
+                四分位數、全距、百分位數、標準分數、切比雪夫不等式
+              </p>
+            </div>
         </div>
 
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Distribution</h1>
+                <h3>分布形態(Distribution Types)</h3>
+            </div> 
+            <div class="card-body">
+              <p class="formula">
+                <a href="distribution.html" class="card-link btn btn-outline-dark">查看</a>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="comment card-text">
+                偏態、峰態<br>
+                Binomial,Chi-Square,f Distribution <br>
+                Hypergeometric,Multinomial,Negative Binomial <br>
+                Normal,Poisson,t Distribution
+              </p>
+            </div>
+        </div>
+       
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
   
   nav {
     height: 10vh;
-    background: #5b78c7;
+    background: #eb99d0;
   }
   
   .nav-links {
@@ -23,7 +23,7 @@
   }
   
   .nav-links li a {
-    color: white;
+    color: rgb(158, 12, 158);
     text-decoration: none;
     font-size: 16px;
   }
@@ -55,6 +55,7 @@
     }
     nav {
       position: relative;
+      background: #f1bee0;
     }
   
     .hamburger {
@@ -68,7 +69,7 @@
   
     .nav-links {
       position: fixed;
-      background: #5b78c7;
+      background: #f1bee0;
       height: 100vh;
       width: 100%;
       flex-direction: column;
@@ -90,6 +91,7 @@
     }
     .nav-links li a {
       font-size: 25px;
+      color: rgb(21, 31, 3);
     }
     .nav-links li:nth-child(1) {
       transition: all 0.5s ease 0.2s;

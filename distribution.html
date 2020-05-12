@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card bg-info text-white">
+            <div class="card-header">           
+                <h1 class="card-title">Skewness</h1>
+                <h3>偏度</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    隨機變量X的偏度γ1為三階標準矩，可被定義為：
+                    $$\gamma_1 = \operatorname{E}\Big[\big(\tfrac{X-\mu}{\sigma}\big)^{\!3}\, \Big] 
+                    = \frac{\mu_3}{\sigma^3} 
+                    = \frac{\operatorname{E}\big[(X-\mu)^3\big]}{\ \ \ ( \operatorname{E}\big[ (X-\mu)^2 \big] )^{3/2}}
+                    = \frac{\kappa_3}{\kappa_2^{3/2}}\ , $$
+                    具有n個值的樣本的樣本偏度為：
+                    $$g_1 = \frac{m_3}{{m_2}^{3/2}} 
+                    = \frac{\tfrac{1}{n} \sum_{i=1}^n (x_i-\overline{x})^3}{\left(\tfrac{1}{n} \sum_{i=1}^n (x_i-\overline{x})^2\right)^{3/2}}\ ,$$
+                    其中${\overline {x}}$是樣本平均值，$m_3$是三階樣本中心矩，<br>
+                    $m_2$是二階樣本中心距，即樣本方差。  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    偏度衡量實數隨機變量概率分布的不對稱性。 <br>
+                    偏度為負,就意味著在概率密度函數左側的尾部比右側的長，<br>
+                    絕大多數的值位於平均值的右側。<br>
+                    偏度為正,就意味著在概率密度函數右側的尾部比左側的長，<br>
+                    絕大多數的值位於平均值的左側。 
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-light text-dark">
+            <div class="card-header">           
+                <h1 class="card-title">Kurtosis</h1>
+                <h3>峰度</h3>
+            </div> 
+            <div class="card-body">
+                <p class="formula">
+                    對於具有n個值的樣本，樣本峰度為：
+                    $$g_2 = \frac{m_4}{m_{2}^2} -3 = \frac{\tfrac{1}{n} \sum_{i=1}^n (x_i - \overline{x})^4}{\left(\tfrac{1}{n} \sum_{i=1}^n (x_i - \overline{x})^2\right)^2} - 3 $$  
+                </p>
+            </div>
+            <div class="card-footer">
+                <p class="comment card-text">
+                    衡量實數隨機變量概率分布的峰態。<br>
+                    峰度高就意味著方差增大是由低頻度的大於或小於平均值的極端差值引起的。  
+                </p>
+            </div>
+        </div>
+ 
+    </div>
+</body>
+</html>
