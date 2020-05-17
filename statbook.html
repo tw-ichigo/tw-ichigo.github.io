@@ -1,0 +1,263 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistic book</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+      position: relative;
+    }
+    
+    ul.nav-pills {
+      width: 20%;
+      top: 20px;
+      position: fixed;
+      background-color: #eb99d0;
+    }
+    /*
+    div.col-8 div {
+      height: 500px;
+    }*/
+    #myScrollspy{
+      /*width: 20vw;*/
+      background-color: #eb99d0;
+    }
+    
+    #bookcontent{
+      width: 80vw;
+    }
+    .content{
+      height: 500px;
+    }
+
+    .header{
+        margin: 2px auto;
+        height: 5vh;
+        background: #eb99d0;
+        padding: 2px;
+        position: fixed;
+        right: 10px;
+        transform: translateX(-10px);
+        /*
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        align-items:center;
+        */
+    }
+    .header a{
+        /*margin-top: -10px;*/
+        padding: 0;
+    }
+    .header a:hover{
+        color: crimson;
+    }
+    
+    .container{
+      display: grid;
+    }
+    /*--toggle--*/
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 39px;
+      height: 20px;
+      margin: 1px 5px 0 0;
+      top: -20px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 18px;
+      /*
+      left: 4px;
+      bottom: 4px;*/
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      transform: translateY(3px);
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
+    @media screen and (max-width: 768px) {
+      ul.nav-pills {
+      width: 35%;
+      }
+    }
+
+  
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+    /*grid for content*/
+    .gcenter{
+      display: flex;
+      justify-content: center;
+      /*align-content: center;*/
+      /*justify-items: center;*//*justify the grid items along the row axis.*/
+      align-items: center; /*aligns the grid items along the column axis*/
+    }
+    .itemv1 { grid-row: 1 / span 2; 
+      
+    }
+    .itemv2 { grid-row: 1 / span 2; 
+      grid-column: 2;
+      
+    }
+    
+    
+    .container3{
+      display: grid;
+      /*
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100vh;*/
+      grid-template-columns: 80px 20px auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+      
+    }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+  <div class="header">
+      <!--<button id="menu-toggle"><i class="fas fa-bars"></i></button>-->
+      <label class="switch">
+        <input id="togglenav" type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <a href="./statguilde.html">statistic guide</a>
+  </div>
+  <div class="container-fluid">
+    <div>
+      <nav id="myScrollspy">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#section1">Section 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Section 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Section 3</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Section 4</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#section41">Link 1</a>
+              <a class="dropdown-item" href="#section42">Link 2</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="bookcontent">
+        <div id="section1" class="bg-success content">    
+          <h1>概論</h1>
+          <div class="container3">
+            <div class="gcenter itemv1"><p>統計學</p></div>
+            <div class="gcenter itemv2"><p style="font-size: 2.5rem;padding-top: 0.5rem;"> $\{$ </p></div>
+            <div>有母數統計</div>
+            <div>無母數統計</div>
+          </div>
+          <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+        <div id="section2" class="bg-warning content"> 
+          <h1>Section 2</h1>
+          <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>        
+        <div id="section3" class="bg-secondary content">         
+          <h1>Section 3</h1>
+          <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+        <div id="section41" class="bg-danger content">         
+          <h1>Section 4-1</h1>
+          <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>      
+        <div id="section42" class="bg-info content">         
+          <h1>Section 4-2</h1>
+          <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
+<script>
+  $('#togglenav').on('change', function(e) {
+    if ($('#togglenav').is(':checked')) {
+      $('#myScrollspy').css({"display":"block"});
+      //$('ul.nav-pills').css({"width":"20%"})
+    } else {
+      $('#myScrollspy').css({"display":"none"});
+      //$('ul.nav-pills').css({"width":"0"})
+    }
+  });
+  /*
+   window.onload會等網頁的全部內容，
+   包括圖片，CSS及<iframe>等外部內容載入後才會觸發，
+   但$(document).ready()在Document Object Model (DOM) 載入後就會觸發，
+   所以順序上$(document).ready()會比window.onload先執行。
+  */
+  $(function() {
+    if (document.getElementById("togglenav").checked)
+     document.getElementById("togglenav").checked = false;
+    $('#myScrollspy').css({"display":"none"});
+  });
+  
+</script>
+</html>

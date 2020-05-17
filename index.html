@@ -12,6 +12,31 @@
     -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Ichigo Economist (エコノミスト)</title>
+    <style>
+        .button {
+         background-color: white;
+         color: black;
+         border: 3px solid #087be6 solid;
+         border-radius: 20px;
+         padding: 5px;
+         box-shadow: 
+            0px 0px 10px #00ccff,
+            inset 0px 0px 10px #00ccff,
+            0px 0px 20px #ff00c8,
+            inset 0px 0px 20px #ff00c8;
+         transform: rotate(20deg) translateY(0px) translateZ(0px);
+         opacity: 1.00;
+         animation-delay: 0.1s;
+         filter:brightness(1.5) contrast(3);
+         animation: breathing 3s ease-out infinite;
+        }
+
+        .button:hover {
+         background-color: #eb99d0;
+         color: rgb(158, 12, 158);
+         border:none;
+        }
+    </style>
   </head>
   <body>
     <nav>
@@ -21,9 +46,9 @@
         <div class="line"></div>
         </div>
         <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="./painting.html">Graffiti</a></li>
-        <li><a href="./statguilde.html">Statistics</a></li>
+        <li class='button'><a href="#">About</a></li>
+        <li class='button'><a href="./painting.html">Graffiti</a></li>
+        <li class='button'><a href="./statbook.html">Statistics</a></li>
         </ul>
     </nav>
 

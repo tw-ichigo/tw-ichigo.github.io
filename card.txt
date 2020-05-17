@@ -29,19 +29,132 @@
         </div>
 </div>
 
-<div class="card bg-light text-dark">
-        <div class="card-header">           
-            <h1 class="card-title"></h1>
-            <h3></h3>
-        </div> 
-        <div class="card-body">
-            <p class="formula">
-                
-            </p>
-        </div>
-        <div class="card-footer">
-            <p class="comment card-text">
-                
-            </p>
-        </div>
-</div>
+
+
+
+@keyframes breathing {
+    0% {filter: brightness(1.5) contrast(3);}
+    50% {filter: brightness(1.1) contrast(2);}
+    100% {filter: brightness(1.5) contrast(3);}
+  }
+  @keyframes zooming {
+    0% {perspective: 45px;}
+    50% {perspective: 50px;}
+    100% {perspective: 45px;}
+  }
+
+
+  .button {
+         background-color: white;
+         color: black;
+         border: 3px solid #087be6 solid;
+         border-radius: 20px;
+         padding: 5px;
+         box-shadow: 
+            0px 0px 10px #00ccff,
+            inset 0px 0px 10px #00ccff,
+            0px 0px 20px #ff00c8,
+            inset 0px 0px 20px #ff00c8;
+         transform: rotate(20deg) translateY(0px) translateZ(0px);
+         opacity: 1.00;
+         animation-delay: 0.1s;
+         filter:brightness(1.5) contrast(3);
+         animation: breathing 3s ease-out infinite;
+        }
+
+        .button:hover {
+         background-color: #eb99d0;
+         color: rgb(158, 12, 158);
+         border:none;
+        }
+
+
+
+  /*animations*/
+  
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(4rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes grow {
+    0% {
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes fadeDown {
+    0% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+  @keyframes up {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  }
+
+
+  .fixed-btn {
+    position: fixed;
+    top: 60px;
+    right: 80px;
+    height: 100px;
+    z-index: 999;
+    display: none;
+}
+
+$(window).scroll(function() {
+    if($(document).scrollTop() > 900){
+        $(".fixed-btn").show();
+    } else {
+        $(".fixed-btn").hide();
+  }
+});
+
+$(window).scroll(function(){
+                   if ($(this).scrollTop() > 900) {
+                        $(".fixed-btn").fadeIn();
+                    } else {
+                        $(".fixed-btn").fadeOut();
+                    }
+           });
